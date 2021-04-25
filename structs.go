@@ -253,6 +253,13 @@ type EventNotification struct {
 	IncludeCertificateOfCompletion    string           `json:"includeCertificateOfCompletion,omitempty"`
 	EnvelopeEvents                    []EnvelopeEvent  `json:"envelopeEvents,omitempty"`
 	RecipientEvents                   []RecipientEvent `json:"recipientEvents,omitempty"`
+	EventData                         EventData        `json:"eventData,omitempty"`
+}
+
+type EventData struct {
+	Version     string `json:"version,omitempty"`
+	Format      string `json:"format,omitempty"`
+	IncludeData []string `json:"includeData,omitempty"`
 }
 
 type EnvelopeEvent struct {
